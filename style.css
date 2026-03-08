@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  color: #111111;
+  background: #ffffff;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: min(92%, 1200px);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 72px 0 56px;
+}
+
+.hero-inner {
+  max-width: 1050px;
+}
+
+.eyebrow,
+.section-label {
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #222222;
+}
+
+.hero h1 {
+  font-size: clamp(3.4rem, 8vw, 7rem);
+  line-height: 0.95;
+  font-weight: 400;
+  max-width: 980px;
+  margin-bottom: 28px;
+}
+
+.intro {
+  font-size: 1.28rem;
+  max-width: 720px;
+  line-height: 1.45;
+  margin-bottom: 26px;
+}
+
+.byline {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.case-section {
+  padding: 72px 0;
+  border-top: 1px solid #e7e7e7;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.reverse .section-grid {
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.reverse .section-media {
+  order: 2;
+}
+
+.reverse .section-content {
+  order: 1;
+}
+
+.section-media {
+  display: flex;
+  justify-content: center;
+}
+
+.section-media img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  object-fit: contain;
+}
+
+.section-content {
+  max-width: 620px;
+}
+
+.section-content h2,
+.dark-left h2,
+.closing h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.9rem);
+  line-height: 1.05;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+
+.section-content p,
+.dark-right p,
+.closing p {
+  font-size: 1.16rem;
+  margin-bottom: 18px;
+}
+
+blockquote {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 26px;
+  color: #111111;
+}
+
+.stats-section {
+  padding: 72px 0;
+  border-top: 1px solid #e7e7e7;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.stat-card {
+  padding-top: 8px;
+}
+
+.stat-number {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  color: #666666;
+}
+
+.stat-card h3 {
+  font-size: 1.45rem;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.stat-card p {
+  font-size: 1.03rem;
+  line-height: 1.55;
+}
+
+.dark-section {
+  background: #111111;
+  color: #f5f5f5;
+  padding: 78px 0;
+  margin-top: 10px;
+}
+
+.dark-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.dark-label {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.dark-right > p {
+  margin-bottom: 28px;
+}
+
+.solution-list {
+  display: grid;
+  gap: 26px;
+}
+
+.solution-item h3 {
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.solution-item p {
+  font-size: 1.03rem;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 0;
+}
+
+.impact-list {
+  margin-top: 26px;
+  display: grid;
+  gap: 16px;
+}
+
+.impact-item {
+  border-top: 1px solid #e7e7e7;
+  padding-top: 14px;
+}
+
+.impact-item span {
+  display: block;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  color: #666666;
+  margin-bottom: 8px;
+}
+
+.impact-item p {
+  margin-bottom: 0;
+  font-size: 1.02rem;
+}
+
+.closing {
+  padding: 88px 0 100px;
+  border-top: 1px solid #e7e7e7;
+}
+
+.closing-inner {
+  max-width: 900px;
+}
+
+@media (max-width: 980px) {
+  .section-grid,
+  .reverse .section-grid,
+  .dark-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reverse .section-media,
+  .reverse .section-content {
+    order: initial;
+  }
+
+  .section-media img {
+    max-width: 520px;
+  }
+
+  .case-section,
+  .stats-section,
+  .dark-section,
+  .closing {
+    padding: 58px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 48px 0 40px;
+  }
+
+  .intro,
+  .section-content p,
+  .dark-right p,
+  .closing p {
+    font-size: 1.02rem;
+  }
+
+  .section-grid,
+  .dark-grid {
+    gap: 34px;
+  }
+
+  blockquote {
+    font-size: 1.35rem;
+  }
+
+  .section-media img {
+    max-width: 100%;
+  }
+}
